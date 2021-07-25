@@ -1,4 +1,4 @@
-'''html
+```html
 <div class="lnbArea">
     <div class="lnbInside">
         <span class="btn_share">공유하기</span>
@@ -7,4 +7,4 @@
                 <img src="${pageContext.request.contextPath}/resources/img/sub/icon_share_link.png" alt="링크 공유하기"></a>
         </div>
 </div>
-'''
+```
