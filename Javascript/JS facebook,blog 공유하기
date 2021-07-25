@@ -1,5 +1,5 @@
 '''javascipt 
-'''<div class="lnbArea">
+<div class="lnbArea">
     <div class="lnbInside">
         <span class="btn_share">공유하기</span>
         <div class="shareBox">
@@ -7,8 +7,10 @@
                 <img src="${pageContext.request.contextPath}/resources/img/sub/icon_share_link.png" alt="링크 공유하기"></a>
         </div>
 </div>
+'''
 
-'''function clip(){
+'''javascipt 
+function clip(){
 
         var url = '';    // <a>태그에서 호출한 함수인 clip 생성
         var textarea = document.createElement("textarea");  
@@ -23,3 +25,4 @@
         
         alert("URL이 복사되었습니다.")  // 알림창
     }
+'''
