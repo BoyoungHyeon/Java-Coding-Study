@@ -1,4 +1,4 @@
-'''js
+'''html
 <div class="lnbArea">
     <div class="lnbInside">
         <span class="btn_share">공유하기</span>
