@@ -1,32 +1,36 @@
 
 #### HTML
 ```html
-<div class="lnbArea">
-    <div class="lnbInside">
-        <span class="btn_share">공유하기</span>
+ <span class="btn_share">공유하기</span>
         <div class="shareBox">
+            <a href="#" class="btn_share_sns" id="sns_facebook" title="페이스북 연동 새창열기" onclick="shareSns('facebook');">
+                <img src="${pageContext.request.contextPath}/resources/img/sub/icon_share_facebook.png" alt="페이스북 공유하기"></a>
+            <a href="#" class="btn_share_sns" id="sns_blog" title="새창열림" onclick="shareSns('blog');">
+                <img src="${pageContext.request.contextPath}/resources/img/sub/icon_share_blog.png" alt="블로그 공유하기"></a>
             <a href="#" id="sns_urlCoby" class="btn_share_sns" title="새창" onclick="clip(); return false;">
                 <img src="${pageContext.request.contextPath}/resources/img/sub/icon_share_link.png" alt="링크 공유하기"></a>
         </div>
-</div>
+</span>
 ```
 
 
 ##### JS
 ```js
-function clip(){
+function shareSns(sns){
+        var snsTitle = '';
+        var snsItems = new Array();
+        var winOpt = new Array();
+        var snsUrl = location.href;
 
-        var url = '';    // <a>태그에서 호출한 함수인 clip 생성
-        var textarea = document.createElement("textarea");  
-        //url 변수 생성 후, textarea라는 변수에 textarea의 요소를 생성
-        
-        document.body.appendChild(textarea); //</body> 바로 위에 textarea를 추가(임시 공간이라 위치는 상관 없음)
-        url = window.document.location.href;  //url에는 현재 주소값을 넣어줌
-        textarea.value = url;  // textarea 값에 url를 넣어줌
-        textarea.select();  //textarea를 설정
-        document.execCommand("copy");   // 복사
-        document.body.removeChild(textarea); //extarea 요소를 없애줌
-        
-        alert("URL이 복사되었습니다.")  // 알림창
-    }  
+        snsItems['facebook'] = "http://www.facebook.com/share.php?t="+encodeURIComponent(snsTitle) + "&u=" + encodeURIComponent(snsUrl);
+        snsItems['blog'] = "http://blog.naver.com/openapi/share?url=" + encodeURIComponent(snsUrl) + "&title=" + encodeURIComponent(snsTitle);
+
+        winOpt['facebook'] = "";
+        winOpt['blog'] = "width=500, height=500, resizable=yes";
+
+        var win = window.open(snsItems[sns], sns, winOpt[sns]);
+        if (win) {
+            win.focus();
+        }
+    }
 ```
