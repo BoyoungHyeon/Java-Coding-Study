@@ -18,8 +18,7 @@
 </c:if>
 ```
 먼저 popupInfo에서 값이 있을 때만 밑의 <div class = "popup_are"> 코드를 실행한다.
-popup창 한 개, 한 개 [오늘하루보지않기]/[닫기] 가 있으므로,
-status를 사용해서 하나씩 증가하는 로직으로 만들어 주었다.
+popup창 한 개, 한 개 [오늘하루보지않기]/[닫기] 가 있으므로, status를 사용해서 하나씩 증가하는 로직으로 만들어 주었다.
 
 
 ##### javascript
@@ -89,11 +88,9 @@ status를 사용해서 하나씩 증가하는 로직으로 만들어 주었다.
 </script>
 ```
 
-ready function에서 가장 직관적으로 짜려고 if문을 구현했는데
-더 간단하게 줄여서 쓰셔도 될 듯 햐다.
+ready function에서 가장 직관적으로 짜려고 if문을 구현했는데 더 간단하게 줄여서 쓰셔도 될 듯 햐다.
 
- 저는 html코드에 팝업 id 값이 박혀있는게 아니라
-'popup_${status.count}', 'todayCookie_${status.count}' 을 사용했기 때문에
+ 저는 html코드에 팝업 id 값이 박혀있는게 아니라 'popup_${status.count}', 'todayCookie_${status.count}' 을 사용했기 때문에
 spilt으로 '-' 기준으로 뒤에 번호만 잘라주어서 마지막 todaycloseWin 부분을 구현했다.
 어려운 코드는 아니지만, 나름 끙끙 작성하였으므로 기록해본다,,,
 
