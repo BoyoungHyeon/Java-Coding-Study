@@ -11,7 +11,7 @@ Java 고수가 되기 위한 길
 [게시물 게시기간 설정](.Java/게시물%20게시기간%20설정.md)
 
 
-## ✔️ Java Script %20
+## ✔️ Java Script
 
 [Cookie 사용하여 팝업창 오늘하루 보지않기](./Javascript/Cookie%20사용%20팝업창%20오늘하루%20보지않기.md)
 
